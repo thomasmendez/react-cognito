@@ -19,9 +19,7 @@ function App() {
       const response = await fetch(import.meta.env.VITE_API_GATEWAY_ENDPOINT, {
         method: "POST",
         headers: {
-          "Access-Control-Allow-Origin": "*",
-          "Access-Control-Allow-Methods": "*",
-          "Access-Control-Allow-Headers": "*",
+          'Authorization': `Bearer ${sessionToken}`,
         },
         body: JSON.stringify({
           "firstName": "John",
